@@ -19,13 +19,14 @@
   },
   "devDependencies": {
     "@cypress/vue": "^2.2.3",
-    "@cypress/webpack-dev-server": "^1.6.0",
+    "@cypress/webpack-dev-server": "^1.5.0",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@nuxtjs/fontawesome": "^1.1.2",
     "cypress": "^8.5.0",
     "html-webpack-plugin": "4",
     "sass": "^1.42.1",
-    "sass-loader": "10"
+    "sass-loader": "10",
+    "webpack-dev-server": "^4.3.0"
   }
 }

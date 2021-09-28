@@ -19,13 +19,13 @@
                     <div class="field">
                       <label class="label">Name</label>
                       <div class="control">
-                        <input v-model="user" class="input" type="text" placeholder="">
+                        <input name="user" v-model="user" class="input" type="text" placeholder="admin">
                       </div>
                       </div>
                       <div class="field">
                         <label class="label">Password</label>
                         <div class="control">
-                          <input v-model="password" class="input" type="password" placeholder="">
+                          <input name="password" v-model="password" class="input" type="password" placeholder="Admin123">
                         </div>
                       </div>
                       <p class="help is-danger has-text-weight-bold">{{ error }}</p>
@@ -51,8 +51,8 @@
 export default {
   data() {
     return {
-      user: 'admin',
-      password: 'Admin123',
+      user: '',
+      password: '',
       error: ''
     }
   },

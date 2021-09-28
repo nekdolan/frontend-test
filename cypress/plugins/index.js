@@ -1,9 +1,7 @@
-// cypress/plugins/index.js
-
 const { startDevServer } = require('@cypress/webpack-dev-server')
 const { getWebpackConfig } = require('nuxt')
 
-module.exports = (on /*, config*/) => {
+module.exports = (on, config) => {
   on('dev-server:start', async (options) => {
     const webpackConfig = await getWebpackConfig()
     return startDevServer({
@@ -11,4 +9,5 @@ module.exports = (on /*, config*/) => {
       webpackConfig,
     })
   })
+  return config
 }
