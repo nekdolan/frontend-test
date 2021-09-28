@@ -13,7 +13,7 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
-# generate static project
-$ yarn generate
+# run cypress (e2e requires api and web servers)
+$ yarn cypress:open
 ```
 
