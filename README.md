@@ -16,4 +16,5 @@ $ yarn start
 # run cypress (e2e requires api and web servers)
 $ yarn cypress:open
 ```
-
+### Requires api server from
+https://github.com/nekdolan/json-api-test
