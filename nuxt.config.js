@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'frontend-test',
+    title: 'Frontend Test',
     htmlAttrs: {
       lang: 'en'
     },
@@ -30,16 +30,33 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/fontawesome',
   ],
+
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      solid: ['faLock']
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    '@nuxt/http'
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  http: {
+    proxy: true,
+  },
+
+  proxy: {
+    '/api/': {
+      target: 'http://localhost:8081',
+      pathRewrite: {
+        '^/api': ''
+      }
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
